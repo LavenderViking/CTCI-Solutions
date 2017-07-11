@@ -72,12 +72,6 @@ bool isRouteBetween(int V1, int V2, Graph G) {
 
 int main() {
 
-	ifstream file;
-	file.open("input.txt");
-
-	int n1;
-	file >> n1;
-
 	Graph g(5);
 	g.addEdge(0,1);
 	g.addEdge(1,0);
@@ -92,8 +86,7 @@ int main() {
 	cout << "isRoute = " << isRouteBetween(0,4,g) << endl;
 
 	g.printGraph();
-	file.close();
-
+	
 	return 0;
 }
 

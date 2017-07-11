@@ -132,9 +132,6 @@ void printBSTinorder(node *node, int level);
 
 int main() {
 
-	ifstream file;
-	file.open("input.txt");
-
 	const int SIZE = 6;
 
 	int arr[SIZE] = {10,20,25,50,60,70};
@@ -158,8 +155,6 @@ int main() {
 	vector<vector<int>> result = BSTseq(root);
 
 	printVec(result);
-
-	file.close();
 
 	return 0;
 }

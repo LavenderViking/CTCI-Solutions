@@ -67,11 +67,6 @@ node* successor(node *n) {
 
 int main() {
 
-	ifstream file;
-	file.open("input.txt");
-
-	int n1; file >> n1;
-
 	int arr[7] = {1,2,3,4,5,6,7};
 
 	node *root = balancedBST(arr, 0, 6);
@@ -81,8 +76,6 @@ int main() {
 	node *node = successor(n);
 
 	cout << "Successor of node " << n->data << " is " << node->data << endl;	
-
-	file.close();
 
 	return 0;
 }

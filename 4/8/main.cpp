@@ -107,9 +107,6 @@ node* FCA(node *root, node *n1, node *n2) {
 
 int main() {
 
-	ifstream file;
-	file.open("input.txt");
-
 	int arr[7] = {1,2,3,4,5,6,7};
 
 	node *root = balancedBST(arr, 0, 6);
@@ -123,8 +120,6 @@ int main() {
 	node *ret1 = FCA(root,n1,n2);
 	cout << "FCA->data = " << ret1->data << endl;
 	
-
-	file.close();
 
 	return 0;
 }

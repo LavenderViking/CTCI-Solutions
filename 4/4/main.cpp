@@ -77,11 +77,6 @@ bool isBalanced2(node *root) {
 
 int main() {
 
-	ifstream file;
-	file.open("input.txt");
-
-	int n1; file >> n1;
-
 	int arr[7] = {1,2,3,4,5,6,7};
 
 	node *root = balancedBST(arr, 0, 6);
@@ -92,11 +87,8 @@ int main() {
 
 	cout << "Balanced = " << isBalanced2(root) << endl;
 
-	file.close();
-
 	return 0;
 }
-
 
 
 
