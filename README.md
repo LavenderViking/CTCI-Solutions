@@ -1,5 +1,5 @@
 # CTCI-Solutions (all except ch. 13-14)
-## Total: 131 / 174
+## Total: 138 / 174
 
 ### Chapter 1: 9/9
 ### Chapter 2: 8/8
@@ -17,4 +17,4 @@
 ### Chapter 14: 0/7
 ### Chapter 15: 2/7
 ### Chapter 16: 25/26
-### Chapter 17: 4/26
+### Chapter 17: 11/26
