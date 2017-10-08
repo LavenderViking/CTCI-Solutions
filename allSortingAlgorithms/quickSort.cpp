@@ -11,30 +11,24 @@ using namespace std;
 #define fori(a,b) for(int i=a;i<b;i++)
 #define forj(a,b) for(int j=a;j<b;j++)
 
-void swap(int *A, int i, int j) {
-	int temp = A[i];
-	A[i] = A[j];
-	A[j] = temp;
-}
-
-int partition(int *A, int size, int left, int right) {
+int partition(int *A, int left, int right) {
 	int pivot = A[(left+right)/2];
 
 	while (left <= right) {
 		while (A[left] < pivot) left++;
 		while (A[right] > pivot) right--;
 
-		if (left <= right) swap(A,left++,right--);
+		if (left <= right) swap(A[left++],A[right--]);
 	}
 
 	return left;
 }
 
-void quickSort(int *A, int size, int left, int right) {
-	int index = partition(A,size,left,right);
+void quickSort(int *A, int left, int right) {
+	int index = partition(A,left,right);
 
-	if (left < index - 1) quickSort(A,size,left,index-1);
-	if (right > index) quickSort(A,size,index,right);
+	if (left < index - 1) quickSort(A,left,index-1);
+	if (right > index) quickSort(A,index,right);
 }
 
 
@@ -61,7 +55,7 @@ int main() {
 
 	printArray(A,size,"Before");
 
-	quickSort(A,size,0,size-1);
+	quickSort(A,0,size-1);
 
 	printArray(A,size,"After");
 
